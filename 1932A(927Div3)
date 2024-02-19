@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    while (n--)
+    {
+        int x,i,count=0;
+        scanf("%d",&x);
+        char a[x];
+        scanf("%s",a);
+        for (i=0;i<x;i++)
+        {
+            if (a[i]=='@')
+            {
+                count++;
+            }
+            else if (a[i]=='*' && a[i+1]=='*')
+            {
+                break;
+            }
+        }
+        printf("%d\n",count);
+ 
+    }
+    return 0;
+}
